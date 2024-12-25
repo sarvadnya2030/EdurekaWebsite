@@ -162,6 +162,11 @@ button {
   transition-property: transform;
   transition-duration: 1s;
 }
+.trending-course-items:hover{
+  transform:translateY(-60px) scale(1.1);
+  /*background-color: red;*/
+}
+
 .trending-course-items > p{
   display: flex;
   flex-direction: column;
@@ -175,3 +180,35 @@ button {
   color: #248ce2;
 }
 
+.sticky-to-top{
+  position:sticky;
+  top:0;
+}
+.more-course-menu {
+  list-style: none;
+  padding: 0;
+
+  position: absolute;
+  right: 5%; /*to orient it to right*/
+
+  display: none;
+}
+
+.more-course-menu > li {
+  border: 1px solid #248ce2;
+  padding: 10px;
+  white-space: nowrap;
+  background-color: white;
+  cursor: pointer;
+}
+.more-course-menu > li:hover {
+  background-color: #248ce2;
+  color: white;
+}
+.course-option-main{
+  position:relative;
+}
+.course-option-main:hover .more-course-menu{
+  display: flex;
+  flex-direction: column;
+}
