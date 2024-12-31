@@ -69,11 +69,53 @@ let studentList = [
     { name: "Sugreev", age: 29, gender: "male" },
   ];
   
-let age=20;
-let searchRes=studentList.filter(function(value,index)
-{
+//let age=23;
+//let searchRes=studentList.filter(function(value,index)
+//{
     //return age===value.age
-    return age<=value.age;
+    //return age<=value.age;
+//});
+
+//console.log(searchRes);
+
+//let search1='female';
+//let searchRes1=studentList.filter(function(value,index){
+    //return search1===value.gender;
+//});
+//console.log(searchRes1);
+//console.log(searchRes1.length);
+
+//let studentName = searchRes1.map(function(value,index){
+    //return value.name;
+//});
+//console.log(studentName);//prints sita
+//console.log(studentName.join(""));
+let ul = document.getElementById("list");
+let inputs = document.querySelectorAll(".get-gender-list");
+
+inputs.forEach(function (input, index) {
+  input.addEventListener("click", function () {
+    if (input.checked === true) {
+      setList(input);
+    }
+  });
 });
-console.log(searchRes);
+
+function setList(input) {
+  let search1 = input.value;
+  let searchResult = studentList
+    .filter(function (value, index) {
+      return search1 === value.gender;
+    })
+    .map(function (value, index) {
+      return `<li>${value.name}</li>`;
+    })
+    .join("");
+  ul.innerHTML = searchResult;
+}
+
+
+
+
+
 

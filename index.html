@@ -15,8 +15,47 @@
          />
         </head>
         <body>
-          <h1 id="count">0</h1>
-          <button id="btn">Click</button>
+           <!-- registration pop up -->
+          <section class="pop-up">
+            <section class="form-area">
+              <button class="close-form">x</button>
+              <h4 class="title">User Registration</h4>
+              <form id="user-registration-form">
+                <div class="form-input">
+                  <label for="">Name</label>
+                  <input type="text" placeholder="Enter Your Name" name="user" />
+                  <small class="user-error"></small>
+                </div>
+      
+                <div class="form-input">
+                  <label for="">Email</label>
+                  <input type="text" placeholder="Enter Email" name="email" />
+                  <small class="email-error"></small>
+                </div>
+      
+                <div class="form-input">
+                  <label for="">Password</label>
+                  <input type="text" placeholder="Enter Password" name="password" />
+                  <small class="password-error"></small>
+                </div>
+                <div class="form-input">
+                  <label for="">Confirm Password</label>
+                  <input
+                    type="text"
+                    placeholder="Enter Confirm Password"
+                    name="confirm_password"
+                  />
+                  <small class="confirm_password-error"></small>
+                </div>
+                <div style="text-align: center">
+                  <button type="button" class="btn submit">Save</button>
+                  <button type="reset" class="btn reset">Reset</button>
+                </div>
+              </form>
+            </section>
+          </section>
+
+          
             <main class="container">
              <section class="sticky-to-top">
                <section class=>
@@ -39,8 +78,8 @@
                         <li class="menu-item">Corporate</li>
                         <li class="menu-item">Courses</li>
                         <li class="menu-item">Blog</li>
-                        <li class="menu-item">Log in</li>
-                        <li class="menu-item">Sign up</li>
+                        <li class="menu-item active-effect">Log in</li>
+                        <li class="menu-item active-effect sign-up">Sign up</li>
                     </ul>
                </header>
               </section>
@@ -102,7 +141,8 @@
         </section>
       </section>
     </main>
-    <script src="basic.js"></script>
+    
+    <script src="main.js"></script>
         </body>
     </head>
 </html>
